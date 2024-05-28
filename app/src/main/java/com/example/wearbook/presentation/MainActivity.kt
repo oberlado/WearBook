@@ -23,8 +23,8 @@ class MainActivity : AppCompatActivity() {
             layoutManager = WearableLinearLayoutManager(this@MainActivity)
             adapter = ButtonAdapter(
                 this@MainActivity,
-                buttonNames = listOf("New", "Open", "Option"),
-                buttonImages = listOf(R.drawable.splash_icon, R.drawable.splash_icon, R.drawable.splash_icon)
+                buttonNames = listOf("Search","Open","New", "Option"),
+                buttonImages = listOf(R.drawable.splash_icon, R.drawable.splash_icon, R.drawable.splash_icon, R.drawable.splash_icon)
             )
         }
     }
@@ -42,9 +42,10 @@ class ButtonAdapter(private val context: AppCompatActivity, private val buttonNa
         holder.buttonImage.setImageResource(buttonImages[position])
         holder.itemView.setOnClickListener {
             when (position) {
-                0 -> context.startActivity(Intent(context, FolderActivity::class.java))
+                0 -> context.startActivity(Intent(context, OpenActivity::class.java))
                 1 -> context.startActivity(Intent(context, OpenActivity::class.java))
-                2 -> context.startActivity(Intent(context, OptionActivity::class.java))
+                2 -> context.startActivity(Intent(context, FolderActivity::class.java))
+                3 -> context.startActivity(Intent(context, OptionActivity::class.java))
             }
         }
     }
