@@ -42,7 +42,7 @@ class ButtonAdapter(private val context: AppCompatActivity, private val buttonNa
         holder.buttonImage.setImageResource(buttonImages[position])
         holder.itemView.setOnClickListener {
             when (position) {
-                0 -> context.startActivity(Intent(context, OpenActivity::class.java))
+                0 -> context.startActivity(Intent(context, SearchActivity::class.java))
                 1 -> context.startActivity(Intent(context, OpenActivity::class.java))
                 2 -> context.startActivity(Intent(context, FolderActivity::class.java))
                 3 -> context.startActivity(Intent(context, OptionActivity::class.java))
