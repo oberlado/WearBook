@@ -10,6 +10,9 @@ import androidx.wear.widget.WearableRecyclerView
 import java.io.File
 import java.lang.Long
 import java.util.Collections
+import kotlin.Comparator
+import kotlin.Int
+import kotlin.String
 
 class SearchActivity : AppCompatActivity() {
     private var wearableRecyclerView: WearableRecyclerView? = null
@@ -21,7 +24,7 @@ class SearchActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_search)
 
-        wearableRecyclerView = findViewById<WearableRecyclerView>(R.id.wearableRecyclerView)
+        wearableRecyclerView = findViewById<WearableRecyclerView>(R.id.searchRecyclerView)
         wearableRecyclerView.setHasFixedSize(true)
         wearableRecyclerView.setEdgeItemsCenteringEnabled(true)
         wearableRecyclerView.setLayoutManager(WearableLinearLayoutManager(this))
